@@ -12,9 +12,11 @@ They stack. You climb them in order. And reaching the top doesn't let you preten
 
 > **The short version:** prompt → context → harness → loop → graph. Instruction, information, capability, progress, coordination. Every layer answers a question the one below it can't.
 
+![The five control surfaces of modern AI engineering](control-surfaces.svg)
+
 ## The one-screen map
 
-Here's the whole idea in one picture. Read it bottom to top — that's the order you build in, and the order each layer leans on the one beneath it.
+The poster above is the whole idea at a glance — five cards, each with its question and its failure mode. If you prefer the dependency view, here it is as a ladder. Read it bottom to top: that's the order you build in, and the order each layer leans on the one beneath it.
 
 ```mermaid
 flowchart BT

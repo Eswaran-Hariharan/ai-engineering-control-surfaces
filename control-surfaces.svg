@@ -1,0 +1,140 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 720" font-family="'Segoe UI', Arial, sans-serif" role="img" aria-label="The five control surfaces of modern AI engineering">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#f7f8fc"/>
+      <stop offset="1" stop-color="#eef1f8"/>
+    </linearGradient>
+    <linearGradient id="spine" x1="0" y1="1" x2="0" y2="0">
+      <stop offset="0" stop-color="#6d28d9"/>
+      <stop offset="0.5" stop-color="#0ea5e9"/>
+      <stop offset="1" stop-color="#db2777"/>
+    </linearGradient>
+    <filter id="cardShadow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="3" stdDeviation="6" flood-color="#1e1b4b" flood-opacity="0.18"/>
+    </filter>
+    <marker id="arrow" markerWidth="12" markerHeight="12" refX="7" refY="4" orient="auto">
+      <path d="M0,0 L8,4 L0,8 Z" fill="#94a3b8"/>
+    </marker>
+    <style>
+      .title { font-size: 30px; font-weight: 800; fill: #1e1b4b; letter-spacing: -0.4px; }
+      .subtitle { font-size: 14px; fill: #64748b; font-weight: 600; }
+      .num { font-size: 22px; font-weight: 800; fill: #ffffff; }
+      .cardTitle { font-size: 18px; font-weight: 800; }
+      .cardCtrl { font-size: 12.5px; font-weight: 700; font-style: italic; }
+      .q { font-size: 13px; font-weight: 700; fill: #0f172a; }
+      .what { font-size: 12.5px; fill: #334155; }
+      .fail { font-size: 11.5px; fill: #b91c1c; font-weight: 600; }
+      .failLabel { font-size: 10px; fill: #94a3b8; font-weight: 700; letter-spacing: 1px; }
+      .stepLbl { font-size: 11px; fill: #64748b; font-weight: 700; }
+      .foot { font-size: 12.5px; fill: #475569; font-weight: 600; }
+    </style>
+  </defs>
+
+  <rect width="1200" height="720" rx="18" fill="url(#bg)"/>
+
+  <!-- Header -->
+  <text x="48" y="58" class="title">The Five Control Surfaces of Modern AI Engineering</text>
+  <text x="48" y="82" class="subtitle">Where you actually steer the model · climb bottom to top · reliability = your lowest solved layer</text>
+
+  <!-- Center spine with ladder labels -->
+  <rect x="571" y="120" width="58" height="548" rx="29" fill="url(#spine)"/>
+  <text x="600" y="150" text-anchor="middle" font-size="12" font-weight="800" fill="#fff">TOP</text>
+  <text x="600" y="648" text-anchor="middle" font-size="12" font-weight="800" fill="#fff">BUILD</text>
+  <text x="600" y="662" text-anchor="middle" font-size="12" font-weight="800" fill="#fff">HERE</text>
+  <!-- upward ladder arrow -->
+  <path d="M600,630 L600,168" stroke="#ffffff" stroke-width="2.5" fill="none" opacity="0.85" marker-end="url(#arrow)"/>
+
+  <!-- ========================= LEFT COLUMN ========================= -->
+  <!-- Card 1 PROMPT -->
+  <g filter="url(#cardShadow)">
+    <rect x="48" y="508" width="490" height="160" rx="14" fill="#ffffff" stroke="#6d28d9" stroke-width="2"/>
+  </g>
+  <rect x="48" y="508" width="490" height="34" rx="14" fill="#6d28d9"/>
+  <rect x="48" y="528" width="490" height="14" fill="#6d28d9"/>
+  <circle cx="72" cy="525" r="15" fill="#4c1d95"/>
+  <text x="72" y="532" text-anchor="middle" class="num">1</text>
+  <text x="98" y="530" class="cardTitle" fill="#ffffff">PROMPT</text>
+  <text x="240" y="530" class="cardCtrl" fill="#e9d5ff">control the instruction</text>
+  <text x="66" y="566" class="q">▸ What, exactly, do I want?</text>
+  <text x="66" y="588" class="what">Pin the task, tone, output shape and boundaries so the</text>
+  <text x="66" y="605" class="what">model solves your problem — not a lookalike it invented.</text>
+  <text x="66" y="633" class="failLabel">BREAKS WHEN</text>
+  <text x="66" y="652" class="fail">✦ it solves a nearby problem · instructions clash · shape wobbles</text>
+
+  <!-- Card 2 CONTEXT -->
+  <g filter="url(#cardShadow)">
+    <rect x="48" y="330" width="490" height="160" rx="14" fill="#ffffff" stroke="#0ea5e9" stroke-width="2"/>
+  </g>
+  <rect x="48" y="330" width="490" height="34" rx="14" fill="#0ea5e9"/>
+  <rect x="48" y="350" width="490" height="14" fill="#0ea5e9"/>
+  <circle cx="72" cy="347" r="15" fill="#0369a1"/>
+  <text x="72" y="354" text-anchor="middle" class="num">2</text>
+  <text x="98" y="352" class="cardTitle" fill="#ffffff">CONTEXT</text>
+  <text x="240" y="352" class="cardCtrl" fill="#e0f2fe">control the information</text>
+  <text x="66" y="388" class="q">▸ What does it need to know right now?</text>
+  <text x="66" y="410" class="what">Assemble the right facts, memory and examples for this</text>
+  <text x="66" y="427" class="what">request — and cut the rest. Good context is chosen.</text>
+  <text x="66" y="455" class="failLabel">BREAKS WHEN</text>
+  <text x="66" y="474" class="fail">✦ missing doc · noisy context buries signal · window overstuffed</text>
+
+  <!-- Card 3 HARNESS -->
+  <g filter="url(#cardShadow)">
+    <rect x="48" y="152" width="490" height="160" rx="14" fill="#ffffff" stroke="#059669" stroke-width="2"/>
+  </g>
+  <rect x="48" y="152" width="490" height="34" rx="14" fill="#059669"/>
+  <rect x="48" y="172" width="490" height="14" fill="#059669"/>
+  <circle cx="72" cy="169" r="15" fill="#065f46"/>
+  <text x="72" y="176" text-anchor="middle" class="num">3</text>
+  <text x="98" y="174" class="cardTitle" fill="#ffffff">HARNESS</text>
+  <text x="240" y="174" class="cardCtrl" fill="#d1fae5">control the capability</text>
+  <text x="66" y="210" class="q">▸ What may it actually do — behind what guardrails?</text>
+  <text x="66" y="232" class="what">Tools, permissions, validation and tracing. The model</text>
+  <text x="66" y="249" class="what">proposes; the harness decides what's allowed.</text>
+  <text x="66" y="277" class="failLabel">BREAKS WHEN</text>
+  <text x="66" y="296" class="fail">✦ blocked tool fires · acts on bad result · unlogged side effects</text>
+
+  <!-- ========================= RIGHT COLUMN ========================= -->
+  <!-- Card 4 LOOP -->
+  <g filter="url(#cardShadow)">
+    <rect x="662" y="241" width="490" height="160" rx="14" fill="#ffffff" stroke="#ea580c" stroke-width="2"/>
+  </g>
+  <rect x="662" y="241" width="490" height="34" rx="14" fill="#ea580c"/>
+  <rect x="662" y="261" width="490" height="14" fill="#ea580c"/>
+  <circle cx="686" cy="258" r="15" fill="#9a3412"/>
+  <text x="686" y="265" text-anchor="middle" class="num">4</text>
+  <text x="712" y="263" class="cardTitle" fill="#ffffff">LOOP</text>
+  <text x="854" y="263" class="cardCtrl" fill="#ffedd5">control the progress</text>
+  <text x="680" y="299" class="q">▸ How does it finish — and know when to stop?</text>
+  <text x="680" y="321" class="what">Plan, act, observe, evaluate, repeat — with a trusted</text>
+  <text x="680" y="338" class="what">stopping condition and an independent progress check.</text>
+  <text x="680" y="366" class="failLabel">BREAKS WHEN</text>
+  <text x="680" y="385" class="fail">✦ stops early · grades itself and is fooled · state leaks</text>
+
+  <!-- Card 5 GRAPH -->
+  <g filter="url(#cardShadow)">
+    <rect x="662" y="419" width="490" height="160" rx="14" fill="#ffffff" stroke="#db2777" stroke-width="2"/>
+  </g>
+  <rect x="662" y="419" width="490" height="34" rx="14" fill="#db2777"/>
+  <rect x="662" y="439" width="490" height="14" fill="#db2777"/>
+  <circle cx="686" cy="436" r="15" fill="#9d174d"/>
+  <text x="686" y="443" text-anchor="middle" class="num">5</text>
+  <text x="712" y="441" class="cardTitle" fill="#ffffff">GRAPH</text>
+  <text x="854" y="441" class="cardCtrl" fill="#fce7f3">control the coordination</text>
+  <text x="680" y="477" class="q">▸ How do many pieces cooperate?</text>
+  <text x="680" y="499" class="what">Route work to specialists, run branches in parallel,</text>
+  <text x="680" y="516" class="what">rejoin the results. The newest, least-settled surface.</text>
+  <text x="680" y="544" class="failLabel">BREAKS WHEN</text>
+  <text x="680" y="563" class="fail">✦ brittle orchestration · wrong routing · handoffs drop state</text>
+
+  <!-- connector lines from cards to spine -->
+  <g stroke="#cbd5e1" stroke-width="2" fill="none">
+    <path d="M538,588 H571"/>
+    <path d="M538,410 H571"/>
+    <path d="M538,232 H571"/>
+    <path d="M629,321 H662"/>
+    <path d="M629,499 H662"/>
+  </g>
+
+  <!-- Footer strip -->
+  <text x="600" y="702" text-anchor="middle" class="foot">Prompt → Context → Harness → Loop → Graph   ·   instruction · information · capability · progress · coordination</text>
+</svg>
