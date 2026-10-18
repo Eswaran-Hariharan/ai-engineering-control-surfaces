@@ -1,4 +1,4 @@
-# The Five Control Surfaces of Modern AI Engineering
+# Beyond the Prompt: Five Layers That Make AI Reliable
 
 *By Hariharan*
 
